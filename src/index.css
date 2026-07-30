@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Sobrescrever a paleta emerald com o verde exército moderno e refinado (oliva/sage) */
+  --color-emerald-50: #f5f6f4;
+  --color-emerald-100: #e6e9e1;
+  --color-emerald-200: #ccd3c2;
+  --color-emerald-300: #a7b39a;
+  --color-emerald-400: #7d8f6f;
+  --color-emerald-500: #596b4c;
+  --color-emerald-600: #425237; /* Verde Militar Moderno Principal */
+  --color-emerald-700: #35422c;
+  --color-emerald-800: #2c3625;
+  --color-emerald-900: #242d1f;
+  --color-emerald-950: #12170f;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 1.2cm 1.5cm;
+  }
+
+  html, body {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: 'Times New Roman', Times, serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide header, floating navigation, buttons, decorations during print */
+  header,
+  nav,
+  .print\:hidden,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Unset dark container constraints on print */
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .print\:bg-white {
+    background-color: #ffffff !important;
+  }
+
+  .print\:text-black {
+    color: #000000 !important;
+  }
+
+  .print\:border-black {
+    border-color: #000000 !important;
+  }
+
+  .print\:shadow-none {
+    box-shadow: none !important;
+  }
+
+  .print\:p-0 {
+    padding: 0 !important;
+  }
+
+  .print\:m-0 {
+    margin: 0 !important;
+  }
+
+  .print\:block {
+    display: block !important;
+  }
+
+  /* Page break rules */
+  .page-break-inside-avoid {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+

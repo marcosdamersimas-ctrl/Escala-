@@ -1,0 +1,6 @@
+{
+  "name": "Escala+",
+  "description": "Sistema completo e moderno para gerenciamento de escalas de serviço e geração automatizada de aditamentos do Setor de Aprovisionamento.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

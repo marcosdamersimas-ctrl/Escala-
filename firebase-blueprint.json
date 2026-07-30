@@ -1,0 +1,26 @@
+{
+  "entities": {
+    "Aditamento": {
+      "title": "Aditamento",
+      "description": "Aditamentos de Boletim Interno gerados salvos por mês",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "mesAno": { "type": "string" },
+        "dataServico": { "type": "string" },
+        "tipo": { "type": "string" },
+        "omName": { "type": "string" },
+        "subUnidade": { "type": "string" },
+        "aprovisionadoraNome": { "type": "string" },
+        "aprovisionadoraFuncao": { "type": "string" },
+        "part2Text": { "type": "string" },
+        "part3Text": { "type": "string" },
+        "part4Text": { "type": "string" },
+        "escalas": { "type": "array" },
+        "signed": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "mesAno", "dataServico", "tipo", "createdAt"]
+    }
+  }
+}
